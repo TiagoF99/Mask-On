@@ -1,5 +1,5 @@
 # mask-off
-Project for 2020 Intern Hackathon
+Project for 2020 IBM Intern Hackathon
 
 ## Stack
 ```
