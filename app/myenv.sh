@@ -1,0 +1,2 @@
+export SID="AC6024b9c33a37e1d8ab6edc2a76f885b7"
+export TOKEN="537f8798b1db458f6085e7e8b8fcf06d"
