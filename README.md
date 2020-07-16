@@ -51,7 +51,6 @@ Mask-On was designed with privacy in mind. It runs locally on your computer, cap
 Mask-On uses OpenCV’s Cascade Classifier to detect a face in the video. If Mask-On is watching for when you leave your desk it will then use a KCF (Kernelized Correlation Filter) to track your face and head and see if it leaves the frame. If Mask-On is checking if you are wearing a mask, it will use that detected face and run it through another CNN classifier that we trained on images of faces with and without masks. We also use tensorflow for model training and mask on a face detection. We use Twilio and the API's it provides to send SMS messages to users. This is all done in a Python backend. Lastly, we deployed a django app on IBM cloud as a dashboard which will provide employers with key statistics on their employees mask usages so that they can enforce mask usage if needed.
 
 ## Demo
-<img src="assets/message.jpg" width=50% height=50% />
 ![Screenshot](assets/dashboard.png)
 ![Screenshot](assets/mask_detector.png)
 
