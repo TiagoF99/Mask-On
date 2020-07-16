@@ -12,6 +12,10 @@ opencv
 tensorflow
 numpy
 
+Dashboard:
+Django
+Chart.js
+
 ...
 ```
 
@@ -40,13 +44,16 @@ If you must wear a mask around the office, but not at your desk, Mask-On will lo
 
 If your office operates with the rule that you must always wear a mask, Mask-On will look through your webcam and if it sees that you haven’t been wearing a mask for an extended period of time, it will send a text to your phone reminding you to put one on.
 
-Mask-On was designed with privacy in mind. It runs locally on your computer, capturing individual frames of your webcam feed live, processing them, and then immediately discarding them afterward. Your video is never stored and your video is never sent over the internet. Information on your mask wearing history is not collected, stored, nor reported anywhere. This tool is not for office places to police their employees, but for employees to help build safe mask wearing habits.  
-
-
+Mask-On was designed with privacy in mind. It runs locally on your computer, capturing individual frames of your webcam feed live, processing them, and then immediately discarding them afterward. Your video is never stored and your video is never sent over the internet. 
 
 ## Technological Implementation 
 
 Mask-On uses OpenCV’s Cascade Classifier to detect a face in the video. If Mask-On is watching for when you leave your desk it will then use a KCF (Kernelized Correlation Filter) to track your face and head and see if it leaves the frame. If Mask-On is checking if you are wearing a mask, it will use that detected face and run it through another CNN classifier that we trained on images of faces with and without masks. We also use tensorflow for model training and mask on a face detection. We use Twilio and the API's it provides to send SMS messages to users. This is all done in a Python backend. Lastly, we deployed a django app on IBM cloud as a dashboard which will provide employers with key statistics on their employees mask usages so that they can enforce mask usage if needed.
+
+## Demo
+![Screenshot](assets/message.jpg)
+![Screenshot](assets/dashboard.png)
+![Screenshot](assets/mask_detector.png)
 
 ## Next Steps
 
